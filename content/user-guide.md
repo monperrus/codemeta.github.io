@@ -11,13 +11,16 @@ A CodeMeta instance file describes the metadata associated with a software objec
 Here is an example of a basic `codemeta.json` that you can put at the root of a Github repo ([link to full example](https://ropensci.github.io/codemetar/articles/codemeta-intro.html)):
 ```json
 {
-    "@context": ["http://schema.org", {"author": {"@id": "schema:author", "@container": "@list"} } ] ,
-    "name": "Generate CodeMeta Metadata for R Packages",
-    "description": "Codemeta defines a 'JSON-LD' format for describing software metadata. This package provides utilities to generate, parse, and modify codemeta.jsonld files automatically for R packages.",
-    "identifier": "http://dx.doi.org/10.5281/zenodo.XXXX"
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/GPL-2.0-or-later",
+    "codeRepository": "https://github.com/SpoonLabs/nopol/",
+    "name": "Nopol",
+    "description": "Nopol is an automatic repair tool for Java",
 }
 ```
 
+You can create a `codemeta.json` using [Codemeta generator](https://forge.softwareheritage.org/source/codemeta-generator/).
 
 When creating a CodeMeta document, note that they contain JSON name ("property" in linked-data), value pairs where the values can be simple values, arrays or JSON objects. A simple value is a number, string, or one the literal values *false*, *null* *true*, for example:
 
